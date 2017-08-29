@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>Test page</title>
+	<meta charset="utf-8" />
+	<script src="../pixi.min.js"></script>
+</head>
+<body>
+	<p>This page is dedicated for tutorials and tests with PIXI</p>
+	<script>
+	// This helper function will automatically detect which renderer you should
+	// be using. If WebGL is not supported by the browser then this function
+	// will return a canvas renderer
+	var renderer = PIXI.autoDetectRenderer(256, 256,
+		// antialias smoothes the edges of fonts and graphics primitives;
+		// transparent makes the canvas background transparent;
+		// resolution makes it easier to work with displays of varying
+		// resolutions and pixel densities;
+		{antialias: false, transparent: false, resolution: 1});
+	// Add the canvas to the HTML document
+	document.body.appendChild(renderer.view);
+	// Create a container object called the "stage"
+	var stage = new PIXI.Container();
+	// Tell the "renderer" to "render" the "stage"
+	renderer.render(stage);
+	</script>
+</body>
+</html>
