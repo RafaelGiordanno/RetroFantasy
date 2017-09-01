@@ -17,6 +17,9 @@
 		// resolution makes it easier to work with displays of varying
 		// resolutions and pixel densities;
 		{antialias: false, transparent: false, resolution: 1});
+	// just the <canvas> object
+	renderer.view.style.border = "1px dashed black";
+	renderer.backgroundColor = 0x061639;
 	// Add the canvas to the HTML document
 	document.body.appendChild(renderer.view);
 	// Create a container object called the "stage"
